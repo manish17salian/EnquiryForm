@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Enquiry Form">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="css/calendar.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="" />
+
+    <title>Enquiry Form</title>
+  </head>
+  <body>
+    <div class="background__image">
+      <div class="background">
+
+      </div>
+      
+<div class="container">
+  <div class="container__head">
+    <header class="header">
+      <h1 class="header__title">Enquiry Form</h1>
+      <div class="btn btn__start btn--0">Start</div>
+    </header>
+  </div>
+  
+  
+  <form class="container__form inactive">
+      <div class="container__form--name " >
+          <span class = "form__name--title">Full Name</span>
+          <input type="text" class="form__input" placeholder="Full Name" required />
+          
+          <div class="btn__next btn--0">
+            <svg class="icon icon-tick" ><use xlink:href="img/sprite.svg#icon-checkmark"></use></svg>
+          </div>
+      </div>
+      
+      <div class="container__form--date inactive">
+        <span class = " form__name--date">Date of Birth</span>
+          <input type="text123" class="form__input from__input--date " placeholder="MM-DD-YY"data-dd-theme="calendar" data-dd-large-only="true"/>
+          <div class="icon__container" data-dd-theme="calendar" data-dd-large-only="true">
+            <svg class="icon icon-calendar " ><use xlink:href="img/sprite.svg#icon-calendar"></use></svg>
+          </div>
+          <div class="btn__next btn--0">
+            <svg class="icon icon-tick" ><use xlink:href="img/sprite.svg#icon-checkmark"></use></svg>
+          </div>
+          
+          
+      </div>
+      <div class="container__form--achievements inactive">
+        <span class = " form__name--date">Achivements</span>
+          <textarea name="message" rows="10" cols="50" class="question form__input" id="msg" placeholder="Write about your Achivements..."></textarea> 
+          <div class="btn__next btn--0">
+            <svg class="icon icon-tick" ><use xlink:href="img/sprite.svg#icon-checkmark"></use></svg>
+          </div>               
+      </div>
+
+      <div class="container__form--familyMembers inactive">
+        <span class = " form__name--date">Family Members</span>
+          <div class="form__checkbox--container">
+            <div class="form__checkbox--conatiner-1">
+              <label class="checkbox__container">
+                Father
+                <input type="checkbox" class="checkbox"/>
+                <span class="checkTick"></span>
+              </label>
+            </div>
+            <div class="form__checkbox--conatiner-2">
+              <label class="checkbox__container">
+                Mother
+                <input type="checkbox" class="checkbox"/>
+                <span class="checkTick"></span>
+              </label>
+            </div>
+            <div class="form__checkbox--conatiner-3">
+              <label class="checkbox__container">
+                Brother
+                <input type="checkbox" class="checkbox"/>
+                <span class="checkTick"></span>
+              </label>
+            </div>
+            <div class="form__checkbox--conatiner-4">
+              <label class="checkbox__container">
+                Sister
+                <input type="checkbox" class="checkbox"/>
+                <span class="checkTick"></span>
+              </label>
+            </div>
+            <div class="form__checkbox--conatiner-5">
+              <label class="checkbox__container">
+                Other
+                <input type="checkbox" class="checkbox"/>
+                <span class="checkTick"></span>
+              </label>
+            </div>
+            <div class="form__checkbox--conatiner-6">
+              <label class="checkbox__container">
+                No One
+                <input type="checkbox" class="checkbox"/>
+                <span class="checkTick"></span>
+              </label>
+            </div>
+          </div> 
+          <div class=" btn--1 inactive">
+            <svg class="icon icon-tick" ><use xlink:href="img/sprite.svg#icon-checkmark"></use></svg>
+          </div>               
+      </div>
+      
+    
+   </form>
+   
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+<script src="datedropper.js"></script>
+<script>
+$('.icon__container, .from__input--date').dateDropper({
+changeValueTo: '.from__input--date',
+lock:'!from',
+minDate: '1/1/1900',
+defaultDate: '25/08/2020',
+maxYear: 2050,
+minYear: 1900,
+modal:true,
+
+});
+</script>
+    </div>
+  </body>
+</html>
+
+

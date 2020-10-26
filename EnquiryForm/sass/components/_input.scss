@@ -1,0 +1,64 @@
+.form {
+  &__input,
+  &__input--date {
+    font-size: 1.5rem;
+    width: 70%;
+    color: inherit;
+    padding: 1rem 1rem;
+    border-radius: 2px;
+    background-color: #f2f0f2;
+    border: none;
+    border-bottom: 3px solid transparent;
+
+    display: block;
+    transition: all 0.3s;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border-bottom: 3px solid $color-primary;
+    }
+
+    &:placeholder-shown ~ .btn__next {
+      visibility: hidden;
+    }
+
+    @media only screen and(max-width:$bp-largest) {
+      width: 40rem;
+      height: 8rem;
+    }
+  }
+
+  &__lable {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 1.2rem;
+
+    display: block;
+    transition: all 0.3s;
+  }
+  &__input:placeholder-shown + &__lable {
+    opacity: 0;
+    visibility: visible;
+    transform: translateY(-2rem);
+  }
+}
+
+.icon__container {
+  height: 100%;
+  width: 4rem;
+  margin-left: -4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  justify-self: center;
+}
+
+.icon-calendar,
+.icon-tick {
+  width: 2rem;
+  height: 2rem;
+}

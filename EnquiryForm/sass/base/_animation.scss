@@ -1,0 +1,47 @@
+@keyframes expand{
+    0%{
+        height: 30rem;
+    }
+
+    25%{
+        height: 50rem;
+    }
+
+    100%{
+        height: 60rem;
+    }
+
+
+}
+
+
+@keyframes invisible{
+    0%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: .75;
+    }
+
+    100%{
+        opacity: 0;
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@keyframes fromLeft{
+    0%{
+        opacity: 0;
+        transform: translateY(20%);
+    }
+
+    50%{
+        opacity: .75;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
